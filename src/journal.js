@@ -13,12 +13,12 @@ export function vowelCount(description) {
 export function consonantCount(description) {
   var inputs = description.match(/[bcdfghjklmnpqrstvwxyz]/g);
   var numOfCons = parseInt(inputs.length);
-  return numOfCons;
+  return numOfCons
 }
 
 export function getTeaser(description) {
   // grab everything till the end of the sentence
-  var arr = description.match(/(.*?)[.?!]/g);
+  var arr = description.match(/(.*?)./g);
   var firstEightWords = arr[0].split(/\s+/).slice(0,8).join(" ");
 
   return firstEightWords;
